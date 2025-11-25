@@ -11,11 +11,12 @@ const modalElements = {
 	image: document.getElementById('modalImage')
 }
 
+//get all recipes
 const getRecipes = async () => {
 	const response = await fetch('/api/v1/')
 	return await response.json()
 }
-
+//get one recipe
 const getRecipe = async id => {
 	const response = await fetch(`/api/v1/recipe/${id}`)
 	return await response.json()
